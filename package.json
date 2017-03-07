@@ -1,0 +1,40 @@
+{
+  "name": "neutrino-react-boilerplate",
+  "description": "A boilerplate for the anti-boilerplate toolchain.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Jeff Friesen"
+  },
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build",
+    "test": "neutrino test",
+    "coverage": "neutrino test --coverage"
+  },
+  "devDependencies": {
+    "enzyme": "^2.7.1",
+    "neutrino": "^4.3.1",
+    "neutrino-preset-jest": "^4.3.0",
+    "neutrino-preset-react": "^4.2.3",
+    "react-addons-test-utils": "^15.4.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "config": {
+    "presets": [
+      "neutrino-preset-react",
+      "neutrino-preset-jest"
+    ],
+    "neutrino": {
+      "entry": {
+        "vendor": [
+          "react",
+          "react-dom"
+        ]
+      }
+    }
+  }
+}
