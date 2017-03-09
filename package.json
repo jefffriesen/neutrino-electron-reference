@@ -17,7 +17,7 @@
     "neutrino": "^4.3.1",
     "neutrino-preset-airbnb-base": "^4.3.1",
     "neutrino-preset-jest": "^4.3.0",
-    "neutrino-preset-prettier": "^0.1.0",
+    "neutrino-preset-lint-prettier": "git+https://github.com/jefffriesen/neutrino-preset-lint-prettier.git",
     "neutrino-preset-react": "^4.2.3",
     "react-addons-test-utils": "^15.4.2"
   },
@@ -29,7 +29,9 @@
   "config": {
     "presets": [
       "neutrino-preset-react",
-      "neutrino-preset-jest"
+      "neutrino-preset-class-properties",
+      "neutrino-preset-jest",
+      "neutrino-preset-lint-prettier"
     ],
     "neutrino": {
       "entry": {
