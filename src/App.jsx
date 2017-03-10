@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
+import Feature from './somefeature/index';
 
 @observer
 export default class App extends Component {
@@ -60,6 +61,10 @@ export default class App extends Component {
           <button onClick={this.decreaseMobxHandler}>Down</button>
           {' '}
           <small>(welcome to the dark side)</small>
+        </div>
+        <div style={sectionStyle}>
+          <h3>Testing:</h3>
+          <Feature />
         </div>
       </div>
     );
