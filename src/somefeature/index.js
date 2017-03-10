@@ -14,7 +14,14 @@ export default class Feature extends Component {
           <li><code>*_spec.js</code></li>
           <li><code>.jsx</code></li>
         </ul>
+
+        <h5>Flowtype validation: {exampleFunction(5, 'should succeed')}</h5>
+        <h5>Flowtype validation: {exampleFunction('should error', 5)}</h5>
       </div>
     );
   }
+}
+
+function exampleFunction(val: number, message: string): string {
+  return `Value of ${val}: Custom message: ${message} `;
 }
