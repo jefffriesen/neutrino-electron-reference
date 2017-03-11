@@ -20,7 +20,7 @@ export default class App extends Component {
     this.setState({ counter: this.state.counter - 1 });
   };
 
-  // I love using Mobx but this boilerplate is primarily a reference for neutrino.js.
+  // I love using Mobx but this implementation is primarily a reference for neutrino.js.
   // Still, I needed an example of using a decorator so instead of creating
   // pointless example decorator function I used Mobx decorators.
   // And this example shows a fun alternative to using React's `setState()`

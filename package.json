@@ -1,7 +1,7 @@
 {
-  "name": "neutrino-react-boilerplate",
-  "description": "A boilerplate for the anti-boilerplate toolchain.",
-  "version": "0.0.1",
+  "name": "neutrino-react-reference",
+  "description": "A reference implementation for neutrino with React, linting, type checking & decorators",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Jeff Friesen"
