@@ -45,7 +45,8 @@
       "entry": {
         "vendor": [
           "react",
-          "react-dom"
+          "react-dom",
+          "lodash"
         ]
       }
     }
