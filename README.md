@@ -9,3 +9,9 @@ A reference implementation for neutrino with React, linting, type checking & dec
 * Wait until neutrino v5 lands and then update these dependencies. There are several breaking changes.
 * Get tcomb runtime validations and type checking running
 * Documentation in the readme and in the code
+* Add additional linting such as no-unused-styles
+
+
+
+### Quick notes (to be expanded on later)
+* Can use components with `.js` or `.jsx`
