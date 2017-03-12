@@ -10,7 +10,7 @@ A reference implementation for neutrino with React, linting, type checking & dec
 * Get tcomb runtime validations and type checking running
 * Documentation in the readme and in the code
 * Add additional linting such as no-unused-styles
-
+* Get 100% test coverage (because it's easy to do right now)
 
 
 ### Quick notes (to be expanded on later)
