@@ -1,6 +1,6 @@
 {
-  "name": "neutrino-react-reference",
-  "description": "A reference implementation for neutrino with React, linting, type checking & decorators",
+  "name": "neutrino-electron-reference",
+  "description": "A reference implementation for neutrino with Electron, React, linting, type checking & decorators",
   "version": "0.1.0",
   "license": "MIT",
   "author": {
