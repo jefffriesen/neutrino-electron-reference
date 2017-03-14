@@ -10,9 +10,9 @@ A reference implementation for neutrino with Electron, React, linting, type chec
 * Get tcomb runtime validations and type checking running
 * Documentation in the readme and in the code
 * Add additional linting such as no-unused-styles
+* Get 100% test coverage (because it's easy to do right now)
 
 These will likely be done in [neutrino-react-reference](https://github.com/jefffriesen/neutrino-react-reference) which is set as upstream to this repo.
-
 
 
 ### Quick notes (to be expanded on later)
