@@ -7,7 +7,7 @@ Neutrino is easy and it's a welcome relief to babel and webpack configs. And the
 
 I've created 2 repos to serve as these reference implementations. They are a work in progress but they should get your up and running with Neutrino.js version 4 quickly (version 5 isn't officially released yet).
 
-#### [1. neutrino-react-reference](https://github.com/jefffriesen/neutrino-react-reference)
+#### 1. [neutrino-react-reference](https://github.com/jefffriesen/neutrino-react-reference)
 Simple React app. Uses Mobx as a state container mainly just to show use of decorators. It's easy to replace Mobx with Redux or whatever you use. The functionality here
 intentionally minimal, but it comes with a scaffolding generator to build out
 features quickly.
@@ -23,32 +23,33 @@ features quickly.
   * [Scaffolding generator (Plop)](https://plopjs.com) to easily create feature-first components
   * [Remotedev](https://github.com/zalmoxisus/mobx-remotedev) Remote debugging for Mobx with [Redux Devtools extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
-#### [2. neutrino-electron-reference](https://github.com/jefffriesen/neutrino-electron-reference)
+#### 2. [neutrino-electron-reference](https://github.com/jefffriesen/neutrino-electron-reference)
 Same app as above but uses Electron for publishing into a distributable app on Mac, Windows and Linux.
 
 
+## To Run
+You can either use `yarn` or `npm`
+```
+yarn install    // Load dependencies and create yarn.lock file
+yarn start      // Run locally (or `npm start`)
+yarn build      // Build for deployment
+yarn test       // Run all tests found in the codebase
+yarn coverage   // See test coverage with Jest
+yarn scaffold   // CLI to generate the scaffolding for a component, tests & styling
+```
 
-##### TODO:
-* Wait until neutrino v5 lands and then update these dependencies with neutrino-react-reference as the upstream.
-* Clean up function generators
-* Add current route to store (Link to mwestrate's blog post)
-* Add 404 route
-* Add active link
-
-
-##### To Document
-* tcomb & Flowtypes use
-* mobx remotedev
-* How to use lint and prettier together
-* Feature-first architecture: https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.4zpdahe2f
 
 ## Writing Tests
-You can create app features in their own directory. Normally for neutrino.js, Jest will only look in the test/ folder. Because of an override in neutrino-custom.js, Jest will look for and run any test file as long as it follows one of these naming patterns:
-* *.test.js
-* *_.test.js
-* *.spec.js
-* *_spec.js
-* .jsx
+You can create app features in their own directory. Normally for neutrino.js, Jest will only look in the test/ folder (https://neutrino.js.org/presets/neutrino-preset-jest/). Because of an override in neutrino-custom.js, Jest will look for and run any test file as long as it follows one of these naming patterns:
+```
+*.test.js
+*_.test.js
+*.spec.js
+*_spec.js
+.jsx
+```
+
+dependencies: `neutrino-preset-jest`, `enzyme`, `react-addons-test-utils`
 
 
 ## Scaffolding Generator (Plop)
@@ -67,3 +68,23 @@ This scaffolds out:
 ```
 
 dependencies: `plop`, `inquirer-directory`
+
+## Linting
+I know you are suppose to be able to write a dynamic `.eslintrc.js` file with Neutrino. I kept getting errors so I replaced it with a static `.eslintrc`. I'm waiting until neutrino 5 to see if I can get it working again. Currently I use [prettier-atom](https://atom.io/packages/prettier-atom) to reformat my code on save. So far no conflicts between my lint settings and `prettier`.
+
+dependencies: `eslint`, `eslint-plugin-react`
+
+
+## ToDo:
+* Wait until neutrino v5 lands and then update these dependencies with neutrino-react-reference as the upstream.
+* Clean up function generators
+* Add current route to store (Link to mwestrate's blog post)
+* Add 404 route
+* Add active link
+
+
+#### Documentation
+* tcomb & Flowtypes use
+* mobx remotedev
+* How to use lint and prettier together
+* Feature-first architecture: https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.4zpdahe2f
