@@ -1,0 +1,14 @@
+import {computed, observable, action} from 'mobx'
+
+
+class {{properCase featureName}}Store {
+  @observable date = new Date()
+
+  @computed get time() {
+    return this.date.toString()
+  }
+}
+
+let {{camelCase featureName}}Store = new {{properCase featureName}}Store()
+
+export default {{camelCase featureName}}Store

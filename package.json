@@ -4,46 +4,55 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": {
-    "name": "Jeff Friesen"
+    "name": "Jeff Friesen <momoblackblack@gmail.com>"
   },
-  "main": "main.js",
   "scripts": {
     "start": "neutrino start",
     "start-electron": "neutrino build && electron .",
     "build": "neutrino build",
     "test": "neutrino test",
-    "coverage": "neutrino test --coverage"
+    "coverage": "neutrino test --coverage",
+    "scaffold": "plop --plopfile scaffolding-generator/plopfile.js"
   },
+  "main": "main.js",
   "devDependencies": {
     "babel-plugin-tcomb": "^0.3.24",
     "electron": "^1.6.2",
-    "electron-builder": "^15.3.0",
+    "electron-builder": "^15.6.2",
     "enzyme": "^2.7.1",
+    "eslint": "^3.17.1",
+    "eslint-plugin-react": "^6.10.0",
+    "inquirer-directory": "^2.1.0",
     "neutrino": "^4.3.1",
-    "neutrino-preset-airbnb-base": "^4.3.1",
     "neutrino-preset-class-properties": "^0.1.0",
     "neutrino-preset-decorators": "^0.1.0",
     "neutrino-preset-jest": "^4.3.0",
     "neutrino-preset-lint-prettier": "git+https://github.com/jefffriesen/neutrino-preset-lint-prettier.git",
     "neutrino-preset-react": "^4.2.3",
+    "plop": "^1.7.4",
     "react-addons-test-utils": "^15.4.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "lodash": "^4.17.4",
     "mobx": "^3.1.5",
     "mobx-react": "^4.1.2",
+    "mobx-remotedev": "^0.2.6",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.8",
     "react-dom": "^15.4.2",
+    "react-router-dom": "^4.0.0",
     "tcomb": "^3.2.20"
   },
   "config": {
+    "devtool": "source-map",
     "presets": [
       "neutrino-preset-react",
       "neutrino-preset-class-properties",
       "neutrino-preset-decorators",
+      "neutrino-custom-tcomb.js",
       "neutrino-preset-jest",
-      "neutrino-preset-lint-prettier",
-      "neutrino-custom.js"
+      "neutrino-custom-jest.js"
     ],
     "neutrino": {
       "entry": {
