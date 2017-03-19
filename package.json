@@ -11,7 +11,7 @@
     "build": "neutrino build",
     "test": "neutrino test",
     "coverage": "neutrino test --coverage",
-    "gen": "plop --plopfile generators/plopfile.js"
+    "scaffold": "plop --plopfile scaffolding-generator/plopfile.js"
   },
   "devDependencies": {
     "babel-plugin-tcomb": "^0.3.24",

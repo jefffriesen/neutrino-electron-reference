@@ -52,7 +52,7 @@ You can create app features in their own directory. Normally for neutrino.js, Je
 
 
 ## Scaffolding Generator (Plop)
-Quickly build a feature component but running `yarn gen` or `npm run gen`. For example, you want a Navbar component:
+Quickly build a feature component but running `yarn scaffold` or `npm run scaffold`. For example, you want a Navbar component:
 ```
 yarn gen  // follow instructions. You will be able to create a React function, class and optionally hook it up to a store.
 ```
