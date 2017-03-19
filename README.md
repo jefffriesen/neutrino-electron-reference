@@ -1,19 +1,16 @@
 # neutrino-electron-reference
-A reference implementation for neutrino with Electron, React, linting, type checking & decorators. Neutrino.js is a big step forward in reducing config boilerplate. I don't envision this as a boilerplate, but it's still easier to just clone this repo and go. More importantly, it's nice to have a reference implementation to see concretely what the docs are talking about.
+A reference implementation for neutrino with Electron, React, linting, type checking & decorators.
 
+See [neutrino-react-reference](https://github.com/jefffriesen/neutrino-react-reference) for a lot more documentation. Any changes to that repo will be pulled into this one.
 
-[neutrino.js](https://neutrino.js.org) was built to streamline and simplify webpack & babel configuration, something that's always been a drag when setting up a new project.
+#### Work in progress
+This is not yet working. I get unintelligible errors after building. I probably need to set compilation different. I tried `"devtool": "source-map"` but that didn't help. Neutrino.js is in an awkward phase between version 4 and 5. Docs are in 4 but a lot of fixes in master are on 5.
 
+PRs very welcome.
 
-### TODO:
-* Wait until neutrino v5 lands and then update these dependencies. There are several breaking changes.
-* Get tcomb runtime validations and type checking running
-* Documentation in the readme and in the code
-* Add additional linting such as no-unused-styles
-* Get 100% test coverage (because it's easy to do right now)
-
-These will likely be done in [neutrino-react-reference](https://github.com/jefffriesen/neutrino-react-reference) which is set as upstream to this repo.
-
-
-### Quick notes (to be expanded on later)
-* Can use components with `.js` or `.jsx`
+#### To run:
+```
+yarn install         // install dependencies
+yarn start-electron  // build and run Electron locally for dev
+yarn publish         // TODO
+```
