@@ -1,10 +1,10 @@
 {
-  "name": "neutrino-electron-boilerplate",
-  "description": "A boilerplate for the anti-boilerplate toolchain.",
+  "name": "neutrino-electron-reference",
+  "description": "A reference implementation for neutrino with React, linting, type checking & decorators",
   "version": "0.1.0",
   "license": "MIT",
   "author": {
-    "name": "Jeff Friesen"
+    "name": "Jeff Friesen <momoblackblack@gmail.com>"
   },
   "scripts": {
     "start": "neutrino start",
