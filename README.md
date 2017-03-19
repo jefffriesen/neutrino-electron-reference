@@ -10,13 +10,13 @@ I've created 2 repos to serve as these reference implementations. They are a wor
 #### [1. neutrino-react-reference](https://github.com/jefffriesen/neutrino-react-reference)
 Simple React app. Uses Mobx as a state container mainly just to show use of decorators. It's easy to replace Mobx with Redux or whatever you use. The functionality here
 intentionally minimal, but it comes with a scaffolding generator to build out
-features quickly
+features quickly.
   * [Mobx](https://mobx.js.org) with colocated stores
   * [Class properties](https://github.com/jefffriesen/neutrino-preset-class-properties)
   * [Decorators](https://github.com/jefffriesen/neutrino-preset-decorators)
-  * [Typechecking with tcomb](https://github.com/gcanti/babel-plugin-tcomb) (It's Flow compatible but has some advantages over Flow)
-  * Linting
-  * Jest with tests colocated with feature components
+  * [Typechecking with tcomb](https://github.com/gcanti/babel-plugin-tcomb) (It's [Flow](https://flowtype.org) compatible but has some advantages over Flow)
+  * Linting (not yet using a linting preset)
+  * [Jest](https://facebook.github.io/jest/) with tests colocated with feature components
   * [Bootstrap](http://getbootstrap.com)
   * [React-Bootstrap](https://react-bootstrap.github.io)
   * [React Router 4](https://reacttraining.com/react-router/web/guides/quick-start)
@@ -38,7 +38,6 @@ Same app as above but uses Electron for publishing into a distributable app on M
 
 ##### To Document
 * tcomb & Flowtypes use
-* Plop generators
 * mobx remotedev
 * How to use lint and prettier together
 * Feature-first architecture: https://medium.com/front-end-hacking/the-secret-to-organization-in-functional-programming-913484e85fc9#.4zpdahe2f
