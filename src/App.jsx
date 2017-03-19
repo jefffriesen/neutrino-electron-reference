@@ -1,40 +1,42 @@
-import React, { Component } from 'react';
-import DecoratorsExample from './decorator-example';
-import TypecheckExample from './typecheck-example';
-import TestingInfo from './TestingInfo';
-import { sectionStyle, counterStyle } from './shared/styles';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {Grid, Col} from 'react-bootstrap';
+import Counter from './counter';
 
 export default class App extends Component {
-  state = {
-    counter: 0
-  };
-
-  // Example of a ES2016 class properties https://babeljs.io/docs/plugins/transform-class-properties/
-  increaseHandler = e => {
-    this.setState({ counter: this.state.counter + 1 });
-  };
-  decreaseHandler = e => {
-    this.setState({ counter: this.state.counter - 1 });
-  };
-
   render() {
-    const { counter } = this.state;
     return (
-      <div>
-        <h2>Hello Neutrino + React!</h2>
-
-        <div style={sectionStyle}>
-          <h3>Current React State Counter State</h3>
-          Increment {' '}
-          <button onClick={this.increaseHandler}>Up</button>
-          <button onClick={this.decreaseHandler}>Down</button>{' '}
-          <span style={counterStyle}>{counter}</span>
-        </div>
-
-        <DecoratorsExample />
-        <TestingInfo />
-        <TypecheckExample />
-      </div>
+      <Router>
+        <Grid>
+          <Col sm={2}>
+            <Nav />
+          </Col>
+          <Col sm={10}>
+            <h2>Hello Neutrino + React!</h2>
+            <Route path="/" exact component={Counter} />
+            <Route path="/about" render={() => <h3>About Us</h3>} />
+          </Col>
+        </Grid>
+      </Router>
     );
   }
 }
+
+const Nav = () => (
+  <nav style={navStyles}>
+    <ul style={navStyles.list}>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/about">About</Link></li>
+    </ul>
+  </nav>
+);
+
+const navStyles = {
+  marginTop: '60px',
+  list: {
+    listStyleType: 'none',
+    textTransform: 'uppercase',
+    lineHeight: '2',
+    paddingLeft: '10px',
+  },
+};

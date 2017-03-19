@@ -6,9 +6,3 @@ module.exports = neutrino => {
   neutrino.custom.jest.testPathDirs = ['src', 'test'];
   // neutrino.custom.jest.roots = ['src', 'test'];
 };
-
-// Attempt to add tcomb runtime type checking. Waiting for neutrino v5 because
-// he overhauled the neutrino object
-// neutrino.custom.plugins = ['babel-plugin-tcomb'];
-// console.log('neutrino.config: ', neutrino.config);
-// console.log('neutrino.config: ', neutrino.getWebpackOptions());

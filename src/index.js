@@ -1,6 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 import App from './App';
-import './shared/global.css'
+import {Provider} from 'mobx-react';
+import 'bootstrap/dist/css/bootstrap.css';
+import './shared/global.css';
 
-render(<App />, document.getElementById('root'));
+import store from './store';
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);

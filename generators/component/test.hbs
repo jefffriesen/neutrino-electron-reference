@@ -1,0 +1,37 @@
+import React from 'react';
+import {shallow} from 'enzyme';
+{{#if observer}}
+import {Provider} from 'mobx-react';
+{{/if}}
+import {{properCase componentName}} from './{{dashCase componentName}}';
+
+describe('<{{properCase componentName}} />', () => {
+
+{{#if observer}}
+  let store;
+
+  beforeEach(() => {
+    store = {};
+  });
+
+{{/if}}
+{{#if observer}}
+  it('should render correctly', () => {
+    const dom = shallow(
+      <Provider store={store}>
+        <{{properCase componentName}} />
+      </Provider>,
+    );
+
+    expect(dom).toHaveLength(1);
+  })
+{{else}}
+  it('should render correctly', () => {
+    const dom = shallow(
+      <{{properCase componentName}} />
+    )
+
+    expect(dom).toHaveLength(1);
+  });
+{{/if}}
+});
