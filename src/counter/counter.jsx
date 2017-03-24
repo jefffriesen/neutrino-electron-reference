@@ -38,7 +38,7 @@ export default class Counter extends Component {
         <Button onClick={this.increaseHandler}>
           Up <Glyphicon glyph="arrow-up" />
         </Button>
-        <span className={styles.counter}> {counter}</span>
+        <span className={styles.counterValue}> {counter}</span>
         <h5><small>{timesFive(counter, 'Count times five: ')}</small></h5>
       </div>
     );
