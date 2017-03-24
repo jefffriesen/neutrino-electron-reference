@@ -45,7 +45,7 @@
     "tcomb": "^3.2.20"
   },
   "config": {
-    "devtool": "source-map",
+    "devtool": "inline-source-map",
     "presets": [
       "neutrino-preset-react",
       "neutrino-preset-class-properties",

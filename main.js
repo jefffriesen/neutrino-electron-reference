@@ -1,8 +1,8 @@
 const electron = require('electron');
-const { ipcMain } = require('electron');
+// const { ipcMain } = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const fs = require('fs');
+// const fs = require('fs');
 const path = require('path');
 const url = require('url');
 
@@ -46,14 +46,6 @@ function createWindow() {
 
   require('./electron/menus/mainmenu');
 }
-
-ipcMain.on('open-second-window', (event, arg) => {
-  secondWindow.show();
-});
-
-ipcMain.on('close-second-window', (event, arg) => {
-  secondWindow.hide();
-});
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
