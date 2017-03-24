@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
 import {Grid, Col} from 'react-bootstrap';
 import Counter from './counter';
 
@@ -25,8 +25,12 @@ export default class App extends Component {
 const Nav = () => (
   <nav style={navStyles}>
     <ul style={navStyles.list}>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
+      <li>
+        <NavLink to="/" exact activeStyle={navStyles.activeLinks}>Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/about" activeStyle={navStyles.activeLinks}>About</NavLink>
+      </li>
     </ul>
   </nav>
 );
@@ -38,5 +42,8 @@ const navStyles = {
     textTransform: 'uppercase',
     lineHeight: '2',
     paddingLeft: '10px',
+  },
+  activeLink: {
+    fontWeight: 900,
   },
 };
