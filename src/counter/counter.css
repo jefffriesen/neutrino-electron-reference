@@ -1,4 +1,19 @@
-.counter {
+/*
+By default CSS exports all class names into a global selector scope.
+Styles can be locally scoped to avoid globally scoping styles.
+https://github.com/webpack-contrib/css-loader#css-composing
+*/
+:local .counter {
   font-weight: 900;
-  color: 'blue';
+  font-size: 1.2em;
+  margin-left: 16px;
+}
+
+/*
+CSS-Modules support composition using the `composes` keyword
+https://github.com/webpack-contrib/css-loader#css-composing
+*/
+:local .counterValue {
+  composes: counter;
+  color: blue;
 }

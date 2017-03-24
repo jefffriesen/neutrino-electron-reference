@@ -37,7 +37,7 @@ yarn test       // Run all tests found in the codebase
 yarn coverage   // See test coverage with Jest
 yarn scaffold   // CLI to generate the scaffolding for a component, tests & styling
 ```
-
+--------------------------------------------------------------------------------
 
 ## Writing Tests
 You can create app features in their own directory. Normally for neutrino.js, Jest will only look in the test/ folder (https://neutrino.js.org/presets/neutrino-preset-jest/). Because of an override in neutrino-custom.js, Jest will look for and run any test file as long as it follows one of these naming patterns:
@@ -51,6 +51,7 @@ You can create app features in their own directory. Normally for neutrino.js, Je
 
 dependencies: `neutrino-preset-jest`, `enzyme`, `react-addons-test-utils`
 
+--------------------------------------------------------------------------------
 
 ## Scaffolding Generator (Plop)
 Quickly build a feature component but running `yarn scaffold` or `npm run scaffold`. For example, you want a Navbar component:
@@ -69,13 +70,46 @@ This scaffolds out:
 
 dependencies: `plop`, `inquirer-directory`
 
+--------------------------------------------------------------------------------
+
 ## Linting
 I know you are suppose to be able to write a dynamic `.eslintrc.js` file with Neutrino. I kept getting errors so I replaced it with a static `.eslintrc`. I'm waiting until neutrino 5 to see if I can get it working again. Currently I use [prettier-atom](https://atom.io/packages/prettier-atom) to reformat my code on save. So far no conflicts between my lint settings and `prettier`.
 
 dependencies: `eslint`, `eslint-plugin-react`
 
+--------------------------------------------------------------------------------
 
-## ToDo:
+## CSS Modules
+Write modern CSS and import them like you do JS modules. All imported styles are considered global unless it is locally scoped.
+https://github.com/webpack-contrib/css-loader
+
+```css
+:local .counter {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+:local .counterValue {
+  composes: counter;
+  color: blue;
+}
+```
+
+Global styles like Bootstrap or Foundation can just be imported without assignment. Assign local styles to a variable and use them in the `className` prop:
+```js
+import React from 'react';
+import './bootstrap.css' // global styles
+import styles from './counter.css'; // local component styles
+
+export default class Table extends React.Component {
+  render () {
+    return <span className={styles.counterValue}> {counter}</span>
+}
+```
+
+--------------------------------------------------------------------------------
+
+#### TODO:
 * Wait until neutrino v5 lands and then update these dependencies with neutrino-react-reference as the upstream.
 * Clean up function generators
 * Add current route to store (Link to mwestrate's blog post)
