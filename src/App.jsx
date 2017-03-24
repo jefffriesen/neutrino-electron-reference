@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Switch,
+} from 'react-router-dom';
 import {Grid, Col} from 'react-bootstrap';
 import Counter from './counter';
 
@@ -13,8 +18,11 @@ export default class App extends Component {
           </Col>
           <Col sm={10}>
             <h2>Hello Neutrino + React!</h2>
-            <Route path="/" exact component={Counter} />
-            <Route path="/about" render={() => <h3>About Us</h3>} />
+            <Switch>
+              <Route path="/" exact component={Counter} />
+              <Route path="/about" render={() => <h3>About Us</h3>} />
+              <Route render={() => <h3>No route found!</h3>} />
+            </Switch>
           </Col>
         </Grid>
       </Router>
@@ -43,7 +51,7 @@ const navStyles = {
     lineHeight: '2',
     paddingLeft: '10px',
   },
-  activeLink: {
+  activeLinks: {
     fontWeight: 900,
   },
 };
