@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import {Grid, Col} from 'react-bootstrap';
 import Counter from './counter';
+import {Clock} from './clock-feature';
 
 export default class App extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends Component {
           </Col>
           <Col sm={10}>
             <h2>Hello Neutrino + React!</h2>
+            <Clock />
             <Switch>
               <Route path="/" exact component={Counter} />
               <Route path="/about" render={() => <h3>About Us</h3>} />

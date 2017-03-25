@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './shared/global.css';
 
 import store from './store';
+import {clockFeatureStore} from './clock-feature';
 
 render(
-  <Provider store={store}>
+  <Provider store={store} clockFeatureStore={clockFeatureStore}>
     <App />
   </Provider>,
   document.getElementById('root'),

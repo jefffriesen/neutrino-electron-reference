@@ -1,6 +1,5 @@
 import {computed, observable, action} from 'mobx'
 
-
 class {{properCase featureName}}Store {
   @observable date = new Date()
 
@@ -9,6 +8,4 @@ class {{properCase featureName}}Store {
   }
 }
 
-let {{camelCase featureName}}Store = new {{properCase featureName}}Store()
-
-export default {{camelCase featureName}}Store
+export default new {{properCase featureName}}Store()
