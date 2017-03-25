@@ -53,10 +53,10 @@ dependencies: `neutrino-preset-jest`, `enzyme`, `react-addons-test-utils`
 
 --------------------------------------------------------------------------------
 
-## Scaffolding Generator (Plop)
+## Scaffolding Generator
 Quickly build a feature component but running `yarn scaffold` or `npm run scaffold`. For example, you want a Navbar component:
 ```
-yarn gen  // follow instructions. You will be able to create a React function, class and optionally hook it up to a store.
+yarn scaffold  // follow instructions. You will be able to create a React function, class and optionally hook it up to a store.
 ```
 Creating a feature called `ClockFeature` with a component called `Clock` scaffolds out:
 ```
