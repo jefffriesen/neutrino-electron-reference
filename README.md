@@ -58,14 +58,29 @@ Quickly build a feature component but running `yarn scaffold` or `npm run scaffo
 ```
 yarn gen  // follow instructions. You will be able to create a React function, class and optionally hook it up to a store.
 ```
-This scaffolds out:
+Creating a feature called `ClockFeature` with a component called `Clock` scaffolds out:
 ```
--src
-  -navbar
-    - index.js        // serves as an export
-    - navbar.css      // CSS Module for the React component
-    - navbar.jsx      // React component
-    - navbar.test.jsx // Test scaffold with a 'will it render' sanity check
+- src
+  - clock-feature
+    - components
+      - clock.css       // CSS Module for the React component
+      - clock.jsx       // React component
+      - clock.text.jsx  // Test scaffold with a 'will it render' sanity check
+    - clock-feature.store.js
+    - index.js
+```
+
+Make sure to import the new store and add it to the `<Provider` component inside index.js:
+
+```js
+import {clockFeatureStore} from './clock-feature';
+
+render(
+  <Provider store={store} clockFeatureStore={clockFeatureStore}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+);
 ```
 
 dependencies: `plop`, `inquirer-directory`
