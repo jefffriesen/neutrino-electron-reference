@@ -5,6 +5,7 @@ import {Provider} from 'mobx-react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './shared/global.css';
 
+// Import any stores from features and add it to <Provider />
 import store from './store';
 
 render(

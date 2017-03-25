@@ -1,2 +1,3 @@
-export {{ properCase componentName }} from './components/{{ dashCase componentName }}'
-export {{ camelCase featureName }}Store from './{{ dashCase featureName }}.store'
+import {{ properCase componentName }} from './components/{{ dashCase componentName }}'
+import {{ camelCase featureName }}Store from './{{ dashCase featureName }}.store'
+export { {{ properCase componentName }},  {{ camelCase featureName }}Store }

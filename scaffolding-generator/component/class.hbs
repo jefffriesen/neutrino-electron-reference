@@ -5,22 +5,24 @@ import {observer, inject} from 'mobx-react';
 import s from './{{dashCase componentName}}.css';
 
 {{#if observer}}
-@inject('store')
+@inject('{{ camelCase featureName }}Store')
 @observer
 {{/if}}
 export default class {{ properCase componentName }} extends Component {
-  static defaultProps = {
-    dummy: '',
-  };
-
   static propTypes = {
-    state: PropTypes.string,
+    {{ camelCase featureName }}Store: PropTypes.object,
   };
 
   render() {
+    {{#if observer}}
+    const { {{ camelCase featureName }}Store } = this.props
+    {{/if}}
     return (
       <div className={ s.{{camelCase componentName}} }>
         <h2>{{ properCase componentName }}</h2>
+        {{#if observer}}
+        <h5>Current Time: { {{ camelCase featureName }}Store.time }</h5>
+        {{/if}}
       </div>
     )
   }

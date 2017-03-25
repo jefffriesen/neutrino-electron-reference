@@ -4,9 +4,11 @@ useStrict(true);
 
 @remotedev class Store {
   @observable counter = 0;
+
   @action increaseCounter() {
     this.counter = this.counter + 1;
   }
+
   @action decreaseCounter() {
     this.counter = this.counter - 1;
   }
