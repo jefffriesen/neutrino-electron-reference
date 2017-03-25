@@ -5,15 +5,18 @@ import {observer, inject} from 'mobx-react';
 import styles from './{{dashCase componentName}}.css';
 
 {{#if observer}}
-export default inject('store')(observer(function {{ properCase componentName }}() {
-  return (
-    <div className={ styles.{{camelCase componentName}} }>
-      <h2>{{ properCase componentName }}</h2>
-    </div>
-  )
-}))
+export default inject('store')(
+  observer(function {{ properCase componentName }}() {
+    return (
+      <div className={ styles.{{camelCase componentName}} }>
+        <h2>{{ properCase componentName }}</h2>
+      </div>
+    );
+  }),
+);
 
 {{else}}
+
 export default function {{ properCase componentName }}() {
   return (
     <div className={ styles.{{camelCase componentName}} }>
@@ -21,5 +24,4 @@ export default function {{ properCase componentName }}() {
     </div>
   )
 }
-
 {{/if}}
